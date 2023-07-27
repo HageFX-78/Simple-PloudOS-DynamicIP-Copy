@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Simple PloudOS DynamicIP Copy
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  Adds a simple button to copy Dynamic IP address from PloudOS manage page
 // @author       HageFX78
 // @match        https://ploudos.com/manage/*/
