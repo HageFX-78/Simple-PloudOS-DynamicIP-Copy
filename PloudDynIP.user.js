@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Simple PloudOS DynamicIP Copy
 // @namespace    https://github.com/HageFX-78
-// @version      0.3.1
+// @version      0.3.2
 // @description  Adds a simple button to copy Dynamic IP address from PloudOS manage page
 // @author       HageFX78
 // @license      MIT
@@ -44,6 +44,7 @@ GM_addStyle ( `
     background-color: #32CD32;
 }
 .copied {
+    color: white;
     background-color: #265730;
 }
 
