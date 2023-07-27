@@ -9,8 +9,8 @@
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        GM_addStyle
 // @run-at       document-start
-// @downloadURL  https://github.com/HageFX-78/Simple-PloudOS-DynamicIP-Copy/blob/main/PloudDynIP.user.js
-// @updateURL    https://github.com/HageFX-78/Simple-PloudOS-DynamicIP-Copy/blob/main/PloudDynIP.user.js
+// @downloadURL  https://github.com/HageFX-78/Simple-PloudOS-DynamicIP-Copy/raw/main/PloudDynIP.user.js
+// @updateURL    https://github.com/HageFX-78/Simple-PloudOS-DynamicIP-Copy/raw/main/PloudDynIP.user.js
 // ==/UserScript==
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
