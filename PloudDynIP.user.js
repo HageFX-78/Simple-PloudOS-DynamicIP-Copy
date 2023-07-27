@@ -1,15 +1,11 @@
 // ==UserScript==
 // @name         Simple PloudOS DynamicIP Copy
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  Adds a simple button to copy Dynamic IP address from PloudOS manage page
 // @author       HageFX78
 // @match        https://ploudos.com/manage/*/
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
-// @grant        GM_setValue
-// @grant        GM_getValue
-// @grant        GM.setValue
-// @grant        GM.getValue
 // @grant        GM_addStyle
 // @run-at       document-start
 // @downloadURL  https://github.com/HageFX-78/Simple-PloudOS-DynamicIP-Copy/blob/main/PloudDynIP.user.js
