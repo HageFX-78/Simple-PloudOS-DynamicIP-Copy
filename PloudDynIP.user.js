@@ -1,9 +1,10 @@
 // ==UserScript==
 // @name         Simple PloudOS DynamicIP Copy
-// @namespace    http://tampermonkey.net/
-// @version      0.3
+// @namespace    https://github.com/HageFX-78
+// @version      0.3.1
 // @description  Adds a simple button to copy Dynamic IP address from PloudOS manage page
 // @author       HageFX78
+// @license      MIT
 // @match        https://ploudos.com/manage/*/
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
 // @grant        GM_addStyle
@@ -11,6 +12,17 @@
 // @downloadURL  https://github.com/HageFX-78/Simple-PloudOS-DynamicIP-Copy/blob/main/PloudDynIP.user.js
 // @updateURL    https://github.com/HageFX-78/Simple-PloudOS-DynamicIP-Copy/blob/main/PloudDynIP.user.js
 // ==/UserScript==
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+// Simple Script that adds a button to ploudos.com on your server's manage page to copy dyamic IP address
+//
+// This was created out of frustration of the site's dynamic IP text background being blue, making it hard
+// to see when highlighted, sometimes Ctrl-C straight up doesn't work on that text.
+//
+// Button will only show up when the server is started, button will remain there if the server is stopped
+// it would only lose its functionality until the server is restarted again.
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+
 GM_addStyle ( `
 
 #dyncp {
@@ -49,7 +61,7 @@ window.addEventListener('load', function() {
         temp.remove();
     }
 
-    function addCopyBtn(ele)
+    function addCopyBtn(ele)//Adds button after h2 element of "Status" instead of table ( with id='status') as  the table would be refreshed every second by PloudOS itself
     {
 
         let btn = document.createElement("button");
@@ -71,9 +83,9 @@ window.addEventListener('load', function() {
     {
         if(document.getElementsByTagName("h2")[0].textContent != "Status") return; //Check if page is main page
 
-        let dynmTag = document.getElementsByTagName("tr");
+        let dynmTag = document.getElementsByTagName("tr"); //Table rows are used to determine if the server is started
 
-        if(typeof(dynmTag) != 'undefined' && dynmTag != null && dynmTag.length == 5)
+        if(typeof(dynmTag) != 'undefined' && dynmTag != null && dynmTag.length == 5) // If table rows is 5, it means server is started
         {
             obs.disconnect();
             let tagTopPlaceBtn = document.getElementsByTagName("h2")[0];
@@ -81,7 +93,7 @@ window.addEventListener('load', function() {
         }
         else
         {
-            obs.observe(document.getElementById('status'),{childList: true});
+            obs.observe(document.getElementById('status'),{childList: true}); //To start observing if server is started if not
         }
     }
     function resetButton(btn)
@@ -92,7 +104,7 @@ window.addEventListener('load', function() {
 
     var obs = new MutationObserver(function (e) {
         if (e[0].removedNodes){
-            console.log("Rechecking server start status.");
+            console.log("Rechecking server start status."); //When table is refreshed, checks if server is started again
             serverIsStarted();
         };
     });
