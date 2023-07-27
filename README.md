@@ -3,9 +3,9 @@ Simple userscript that adds a button on your server manage page to copy dynamic 
 
 ## Installation
 1. Install a userscript manager like [Tampermonkey](https://www.tampermonkey.net/) (A chrome extensioon)
-2. Click on the file PloudDynIP.user.js and click on Raw. It will redirect to tampermonkey page asking if you want to install it.
+2. Click on [this](https://github.com/HageFX-78/Simple-PloudOS-DynamicIP-Copy/raw/main/PloudDynIP.user.js) and install.
 
-## Installation (Alt but may be easier)
+## Installation (Alternative)
 1. Install a userscript manager like [Tampermonkey](https://www.tampermonkey.net/) (A chrome extensioon)
 2. Navigate to [Greasy Fork](https://greasyfork.org/en/scripts/471830-simple-ploudos-dynamicip-copy) and just install it from there. (No sign up required)
 
