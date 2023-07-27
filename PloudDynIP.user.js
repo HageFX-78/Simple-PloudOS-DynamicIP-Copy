@@ -12,8 +12,8 @@
 // @grant        GM.getValue
 // @grant        GM_addStyle
 // @run-at       document-start
-// @downloadURL  https://github.com/HageFX-78/Simple-PloudOS-DynamicIP-Copy/blob/main/ploudDynIP.js
-// @updateURL    https://github.com/HageFX-78/Simple-PloudOS-DynamicIP-Copy/blob/main/ploudDynIP.js
+// @downloadURL  https://github.com/HageFX-78/Simple-PloudOS-DynamicIP-Copy/blob/main/PloudDynIP.user.js
+// @updateURL    https://github.com/HageFX-78/Simple-PloudOS-DynamicIP-Copy/blob/main/PloudDynIP.user.js
 // ==/UserScript==
 GM_addStyle ( `
 
